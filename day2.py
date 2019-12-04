@@ -35,14 +35,22 @@ def challenge2(goal):
     """
     file = openFile()
     data = list(map(lambda x: int(x), file.read().split(',')))
-    output = 0
+    noun = verb = output = i = 0
+    tested = {}
     while output != goal:
         thisData = data.copy()
-        thisData[1] = noun = randrange(0, 99)
-        thisData[2] = verb = randrange(0, 99)
+        # Prevent having more than 10000 iterations
+        while tested.get(100*noun + verb, None) is True:
+        	noun = randrange(0, 99)
+        	verb = randrange(0, 99)
+        tested[100 * noun + verb] = True
+        thisData[1] = noun
+        thisData[2] = verb
         processIntcode(thisData)
         output = thisData[0]
+        i+=1
     print(100*noun + verb)
+    print(i)
     file.close()
 
 challenge1()
