@@ -1,6 +1,3 @@
-import sys
-from random import randrange
-
 def challenge1():
     """
     Create intcode processor and process input with 1202 initialization code.
