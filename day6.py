@@ -1,5 +1,4 @@
 import sys
-from random import randrange
 
 def openFile():
     return open(sys.argv[1], "r")
