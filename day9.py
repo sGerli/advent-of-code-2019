@@ -105,7 +105,7 @@ class IntcodeMachine:
 
 def challenges():
     """
-    What is the highest signal that can be sent to the thrusters?
+    Improved and tested intcode machine
     """
     file = openFile()
     data = list(map(lambda x: int(x), file.read().split(','))) + [0 for i in range(10000)]
