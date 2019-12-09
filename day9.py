@@ -26,7 +26,7 @@ class IntcodeMachine:
             if (opcode == 99): # HALT
                 self.halt = True
                 if VERBOSE:
-                    print('END')
+                    print('HALT')
                 break
             elif (opcode == 1): # OPCODE 01 - Sum
                 self.__setParam(paramModes, 3, self.__getParam(paramModes,1) + self.__getParam(paramModes,2))
