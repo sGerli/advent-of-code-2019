@@ -138,7 +138,7 @@ def runPaintingRobot(data, canvas):
 
 def challenges():
     """
-    Improved and tested intcode machine
+    Emergency paint robot
     """
     file = openFile()
     data = list(map(lambda x: int(x), file.read().split(','))) + [0 for i in range(10000)]
